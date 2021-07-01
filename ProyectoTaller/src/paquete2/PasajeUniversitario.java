@@ -29,6 +29,11 @@ public class PasajeUniversitario extends PasajeInterCantonal {
     }
 
     @Override
+    public void calcularValorPasaje() {
+        this.valorPasaje = tarifaBase / 2;
+    }
+
+    @Override
     public String toString() {
         String cadena = String.format("Pasaje Universitario\n"
                 + "Nombre-Pasajero: %s\n"

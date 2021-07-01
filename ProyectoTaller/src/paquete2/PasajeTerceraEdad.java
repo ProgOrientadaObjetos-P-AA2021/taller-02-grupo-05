@@ -16,7 +16,12 @@ public class PasajeTerceraEdad extends PasajeInterCantonal {
             double nkm, double tb, String nu) {
         super(n, c, o, d, nkm, tb);
     }
-    
+
+    @Override
+    public void calcularValorPasaje() {
+
+    }
+
     @Override
     public String toString() {
         String cadena = String.format("Pasaje Universitario\n"
@@ -30,5 +35,7 @@ public class PasajeTerceraEdad extends PasajeInterCantonal {
 
         return cadena;
     }
+
+
     
 }
