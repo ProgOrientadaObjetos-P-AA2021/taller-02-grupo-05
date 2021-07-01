@@ -12,11 +12,14 @@ import java.io.Serializable;
  * @author reroes
  */
 public class PasajeMenorEdad extends PasajeInterCantonal
-        implements Serializable{
+        implements Serializable {
+
     private double porcentajeDescuento;
 
-    public PasajeMenorEdad(String nombrePasajero, String identificacion, String origen, String destino, double distancia, double tarifaBase) {
-        super(nombrePasajero, identificacion, origen, destino, distancia, tarifaBase);
+    public PasajeMenorEdad(String nombrePasajero, String identificacion, 
+            String origen, String destino, double distancia, double tarifaBase){
+        super(nombrePasajero, identificacion, origen, destino, distancia,
+                tarifaBase);
     }
 
     public double getPorcentajeDescuento() {
@@ -29,11 +32,13 @@ public class PasajeMenorEdad extends PasajeInterCantonal
 
     @Override
     public void calcularValorPasaje() {
-        this.valorPasaje = (distancia * 0.10) + (tarifaBase -(tarifaBase * porcentajeDescuento/100));
+        this.valorPasaje = (distancia * 0.10) + (tarifaBase - 
+                (tarifaBase * porcentajeDescuento / 100));
     }
 
     @Override
     public String toString() {
-        return  String.format(" %s \n Porcentaje descuento: %s ", super.toString(), porcentajeDescuento);
+        return String.format("Pasaje Menor de Edad%s\nPorcentaje descuento: %s "
+                + "", super.toString(), porcentajeDescuento);
     }
 }

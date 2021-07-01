@@ -18,6 +18,7 @@ public class PasajeUniversitario extends PasajeInterCantonal {
     public PasajeUniversitario(String n, String c, String o, String d,
             double nkm, double tb, String nu) {
         super(n, c, o, d, nkm, tb);
+        nameUniversidad = nu;
     }
 
     public String getNameUniversidad() {
@@ -36,14 +37,22 @@ public class PasajeUniversitario extends PasajeInterCantonal {
     @Override
     public String toString() {
         String cadena = String.format("Pasaje Universitario\n"
-                + "Nombre-Pasajero: %s\n"
-                + "Cedula: %s\n"
-                + "Origen: %s\n"
-                + "Destino: %s\n"
-                + "Km de distancia: %.2f\n"
-                + "Tarifa Base: %.2f\n"
-                + "Valor Pasaje: %.2f\n");
-
+                +"Nombre-Pasajero: %s\n"
+                +"Cedula: %s\n"
+                +"Origen: %s\n"
+                +"Destino: %s\n"
+                +"Km de distancia: %.2f\n"
+                +"Nombre de Universidad: %s\n"
+                +"Tarifa Base: %.2f\n"
+                +"Valor Pasaje: %.2f\n",
+                getNombrePasajero(),
+                getIdentificacion(),
+                getOrigen(),
+                getDestino(),
+                getDistancia(),
+                getNameUniversidad(),
+                getTarifaBase(),
+                getValorPasaje());
         return cadena;
     }
 
