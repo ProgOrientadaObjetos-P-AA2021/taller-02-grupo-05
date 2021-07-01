@@ -38,7 +38,7 @@ public class PasajeMenorEdad extends PasajeInterCantonal
 
     @Override
     public String toString() {
-        return String.format("Pasaje Menor de Edad%s\nPorcentaje descuento: %s "
-                + "", super.toString(), porcentajeDescuento);
+        return String.format("%s\nPorcentaje descuento: %s\n"
+                , super.toString(), porcentajeDescuento);
     }
 }

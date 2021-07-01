@@ -37,7 +37,7 @@ public class PasajeNormal extends PasajeInterCantonal implements Serializable{
 
     @Override
     public String toString() {
-        return  String.format("Pasaje Normal%s\nPorcentaje adicional: %s ",
+        return  String.format("%s\nPorcentaje adicional: %s\n",
                 super.toString(), porcentajeAdicional);
 
     }
